@@ -53,12 +53,10 @@ const data = [
   },
 ];
 
-const Project = () => {
+const Projects = () => {
   const navigate = useNavigate();
   return (
-    <div>
-       
-     
+    <div>    
     <SectionBanner item={bannerproject} title={'20+ Dự án'} description={'Đã được thực hiện bao gồm đa dạng các hình thức Website, LandingPage, ERP, CRM, HRM,... với nhiều lĩnh vực khác nhau như: Bán lẻ, Giáo dục - Đào tạo, Công nghệ, Xây dựng,...'} />
      <SectionHeader item={<CgMenuGridO fontSize={24} color="#2165CC" className='mt-4'/> } title={'Dự án của chúng tôi'}/>
       <div className="w-full flex flex-col items-center gap-6 mt-4">
@@ -105,4 +103,4 @@ const Project = () => {
   )
 }
 
-export default Project
+export default Projects
