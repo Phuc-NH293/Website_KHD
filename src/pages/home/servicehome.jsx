@@ -6,6 +6,7 @@ import Servicecard5 from '@/assets/servicecard4.png';
 import Servicecard6 from '@/assets/servicecard5.png';
 import { CgMenuGridO } from "react-icons/cg";
 import { IoIosArrowRoundForward } from "react-icons/io";
+import { useNavigate } from 'react-router-dom';
 import SectionHeader from '../../components/SectionHeader';
 const index = [
   {
@@ -35,6 +36,7 @@ const index = [
 
 ]
 const ServiceHome = () => {
+  const navigate=useNavigate();
   return (
    <>
    <SectionHeader item={<CgMenuGridO fontSize={24} color="#2165CC" className='mt-4'/> } title={'Dịch vụ của chúng tôi'}/>
@@ -52,7 +54,8 @@ const ServiceHome = () => {
   ))}
 </div>
   <div className='flex py-6 px-6 justify-center items-center '>
-  <button className='flex items-center justify-center border border-[#393939] rounded-lg gap-2 p-2 text-[16px] w-[150px] cursor-pointer'>Xem chi tiết 
+  <button className='flex items-center justify-center border border-[#393939] rounded-lg gap-2 p-2 text-[16px] w-[150px] cursor-pointer'
+  onClick={()=>navigate('/service')}>Xem chi tiết 
      <IoIosArrowRoundForward size={24}/>
 </button>
   </div>

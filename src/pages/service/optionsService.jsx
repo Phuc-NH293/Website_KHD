@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { IoIosArrowDown } from "react-icons/io";
+import { useNavigate } from "react-router-dom";
 
 const data = [
   { title: "Phần mềm quản lý doanh nghiệp", content: "Nội dung chi tiết..." },
@@ -16,6 +17,7 @@ const OptionsService = () => {
   const toggleBox = (index) => {
     setActiveIndex(activeIndex === index ? null : index);
   };
+  const navigate= useNavigate();
   return (
 
     <section className="py-4 px-8 relative">
@@ -49,7 +51,8 @@ const OptionsService = () => {
       </div>
 
       <div className="flex justify-center mt-6">
-        <button className="border border-gray-400 rounded-full px-6 py-2 text-sm hover:bg-gray-100 transition cursor-pointer">
+        <button className="border border-gray-400 rounded-full px-6 py-2 text-sm hover:bg-gray-100 transition cursor-pointer"
+          onClick={()=> navigate('/project')}>
           Các dự án của chúng tôi →
         </button>
       </div>
