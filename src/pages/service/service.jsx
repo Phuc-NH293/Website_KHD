@@ -1,4 +1,4 @@
-import BannerService from "./BannerService"
+import BannerService from "./bannerService"
 import OptionsService from "./optionsService"
 
 const Service = () => {
