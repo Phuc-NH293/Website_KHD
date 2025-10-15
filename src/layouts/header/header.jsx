@@ -1,4 +1,4 @@
-  import Logo from "@/assets/logo.png";
+import Logo from "@/assets/logo.png";
 import { Menu } from "antd";
 import { useState } from "react";
 import { IoClose, IoMenu } from "react-icons/io5";
