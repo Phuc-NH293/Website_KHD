@@ -1,11 +1,11 @@
 import Diamonft from '@/assets/diamondft.png';
 import LogoFooter from '@/assets/logofooter.png';
 import { MdOutlineMailOutline, MdOutlinePhoneInTalk } from "react-icons/md";
-
 const Footer = () => {
   return (
     <footer className="bg-[#001B46] text-white py-6 px-6 md:px-40 w-screen relative left-1/2 right-1/2 -mx-[50vw]">
-      <div className="max-w-screen-2xl mx-auto flex flex-row flex-wrap md:flex-nowrap justify-between items-start md:items-center w-full">
+      <div className="max-w-screen-2xl mx-auto flex flex-row flex-wrap md:flex-nowrap justify-between items-start md:items-center w-full"
+    >
         <div className="w-1/2 md:w-auto flex flex-col items-start">
           <img src={LogoFooter} alt="" />
           <div className="mt-5 w-full">
@@ -23,7 +23,7 @@ const Footer = () => {
           </div>
         </div>
         <div className="w-1/2 md:w-auto flex justify-end items-center mt-0">
-          <img src={Diamonft} alt="" className="w-full h-auto" />
+          <img src={Diamonft} alt="" className="w-full h-auto hidden sm:block" />
         </div>
       </div>
     </footer>

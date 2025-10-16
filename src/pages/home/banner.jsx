@@ -9,7 +9,7 @@ const Banner = () => {
 
   return (
     <>
-      <div className="relative flex items-center justify-center bg-cover bg-center px-6">
+      <div className="relative flex items-center justify-center w-full px-0 sm:px-6">
         <img
           src={bannerimg}
           alt=""
@@ -18,14 +18,10 @@ const Banner = () => {
         <img
           src={bannermobile}
           alt=""
-          className="block sm:hidden w-full h-auto rounded-lg"
+          className="block sm:hidden h-auto rounded-lg "
         />
         <div
-          className="
-             absolute z-10 text-white
-    flex flex-col items-center justify-center text-center
-    top-[25%] left-1/2 -translate-x-1/2
-    sm:top-1/2 sm:left-24 sm:translate-x-0 sm:-translate-y-1/2 sm:items-start sm:text-left 
+          className="absolute text-white flex flex-col items-center justify-center text-center top-[25%] left-1/2 -translate-x-1/2 sm:top-1/2 sm:left-24 sm:translate-x-0 sm:-translate-y-1/2 sm:items-start sm:text-left 
           "
         >
           <img
