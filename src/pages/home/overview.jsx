@@ -27,13 +27,13 @@ const Overview = () => {
   return (
     <>
     <SectionHeader icon={Keybroad} title={'Tổng quan'} />
-<div className="flex flex-wrap sm:flex-nowrap justify-between w-full gap-4">
+<div className="flex flex-wrap sm:flex-nowrap w-full gap-4">
   {overviewStats.map((item, index) => (
     <div
       key={index}
       className={`text-white rounded-lg p-4 min-h-[160px] relative ${
         index < 2
-          ? "w-[48%] sm:w-1/3" 
+          ? "w-[47%] sm:w-1/3" 
           : "w-full sm:w-1/3"  
       }`}
       style={{ backgroundColor: item.bg }}
