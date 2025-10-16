@@ -1,4 +1,5 @@
 import bannerproject from '@/assets/bannerproject.png';
+import bannerptmobile from '@/assets/bannerptmobile.png';
 import productpj from '@/assets/productpj.png';
 import { CgMenuGridO } from "react-icons/cg";
 import { HiOutlineBuildingOffice2 } from "react-icons/hi2";
@@ -7,7 +8,6 @@ import { useNavigate } from 'react-router-dom';
 import SectionBanner from "../../components/SectionBanner";
 import SectionHeader from '../../components/SectionHeader';
 import Paginations from './pagination';
-
 const data = [
   {
     id: 1,
@@ -57,10 +57,10 @@ const Projects = () => {
   const navigate = useNavigate();
   return (
     <div>    
-    <SectionBanner item={bannerproject} title={'20+ Dự án'} description={'Đã được thực hiện bao gồm đa dạng các hình thức Website, LandingPage, ERP, CRM, HRM,... với nhiều lĩnh vực khác nhau như: Bán lẻ, Giáo dục - Đào tạo, Công nghệ, Xây dựng,...'} />
+    <SectionBanner item={bannerproject} itemMobile={bannerptmobile} title={'20+ Dự án'} description={'Đã được thực hiện bao gồm đa dạng các hình thức Website, LandingPage, ERP, CRM, HRM,... với nhiều lĩnh vực khác nhau như: Bán lẻ, Giáo dục - Đào tạo, Công nghệ, Xây dựng,...'} />
      <SectionHeader item={<CgMenuGridO fontSize={24} color="#2165CC" className='mt-4'/> } title={'Dự án của chúng tôi'}/>
       <div className="w-full flex flex-col items-center gap-6 mt-4">
-      <div className="flex flex-wrap justify-center gap-6 w-full relative">
+      <div className="flex flex-col w-full sm:flex-row sm:flex-wrap justify-center gap-6 sm:w-full relative">
         {data.map((item) => (
           <div
             key={item.id}
