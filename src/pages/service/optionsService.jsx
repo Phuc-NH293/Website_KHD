@@ -13,25 +13,27 @@ const data = [
 
 const OptionsService = () => {
   const [activeIndex, setActiveIndex] = useState(null);
+  const navigate = useNavigate();
 
   const toggleBox = (index) => {
     setActiveIndex(activeIndex === index ? null : index);
   };
-  const navigate= useNavigate();
-  return (
 
-    <section className="py-4 px-8 relative">
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-y-16 gap-x-4">
+  return (
+    <section className="py-6 px-0 relative bg-white">
+      <div className="max-w-screen-xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-y-8 gap-x-6 px-4 sm:px-6 md:px-8">
         {data.map((item, index) => {
           const isActive = activeIndex === index;
           return (
             <div
               key={index}
-              className="relative bg-gradient-to-r from-[#194C99] to-[#2165CC] rounded-lg p-4 cursor-pointer gap-4"
+              className="relative bg-gradient-to-r from-[#194C99] to-[#2165CC] rounded-lg p-4 cursor-pointer w-full"
               onClick={() => toggleBox(index)}
             >
               <div className="flex justify-between items-center px-4">
-                <span className="text-white font-medium">{item.title}</span>
+                <span className="text-white font-medium whitespace-normal break-words">
+                  {item.title}
+                </span>
                 <IoIosArrowDown
                   className={`!text-white text-lg transition-transform duration-300 ${
                     isActive ? "rotate-180" : ""
@@ -50,14 +52,15 @@ const OptionsService = () => {
         })}
       </div>
 
-      <div className="flex justify-center mt-6">
-        <button className="border border-gray-400 rounded-full px-6 py-2 text-sm hover:bg-gray-100 transition cursor-pointer"
-          onClick={()=> navigate('/project')}>
+      <div className="flex justify-center mt-8">
+        <button
+          className="border border-gray-400 rounded-full px-6 py-2 text-sm hover:bg-gray-100 transition cursor-pointer"
+          onClick={() => navigate("/project")}
+        >
           Các dự án của chúng tôi →
         </button>
       </div>
     </section>
-
   );
 };
 

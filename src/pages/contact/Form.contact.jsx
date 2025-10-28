@@ -68,11 +68,12 @@ const FormContact = () => {
           </MyFormItemGroup>
 
           <MyFormItem name="vde" label="Vấn đề bạn đang gặp phải">
-            <Input
-              placeholder="Input here"
-              className="!bg-[#081933] border border-white !text-white !placeholder-[#BCBCBC] focus:outline-none focus:ring-2 focus:ring-white"
-            />
-          </MyFormItem>
+  <Input.TextArea
+    rows={4} 
+    placeholder="Nhập vấn đề bạn đang gặp phải"
+    className="!bg-[#081933] border border-white !text-white !placeholder-[#BCBCBC] focus:outline-none focus:ring-2 focus:ring-white resize-none"
+  />
+</MyFormItem>
         </MyFormItemGroup>
 
         <Button
